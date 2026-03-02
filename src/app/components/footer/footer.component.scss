@@ -1,0 +1,13 @@
+@import '../../../styles'; // Import global variables
+
+.footer {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../styles'; // Import global variables
+
+.hero {
+  background-color: $secondary-color;
+  text-align: center;
+  padding: 6rem 1rem;
+
+  h1 { font-size: 3rem; margin-bottom: 1rem; }
+  p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
+    button { width: 100%; padding: 0.8rem; }
+  }
+}

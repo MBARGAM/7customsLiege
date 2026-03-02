@@ -1,0 +1,11 @@
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contactez-nous</h2>
+    <form (submit)="sendEmail(); $event.preventDefault()">
+      <input type="text" placeholder="Nom"  name="name" required>
+      <input type="email" placeholder="Email"  name="email" required>
+      <textarea placeholder="Message"  name="message" rows="5" required></textarea>
+      <button type="submit" class="btn-primary">Envoyer</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+@import '../../../styles'; // Import global variables
+.why-us {
+  padding: 4rem 1rem;
+  background-color: $secondary-color;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li { margin: 1rem 0; font-size: 1.1rem; }
+  }
+
+  @media (max-width: 768px) {
+    li { font-size: 1rem; }
+  }
+}

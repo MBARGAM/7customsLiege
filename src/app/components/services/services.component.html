@@ -1,0 +1,15 @@
+<section class="services" id="services">
+  <div class="container">
+    <h2>Nos Services</h2>
+    <div class="slider">
+      <button class="slider-btn prev" (click)="prevSlide()">&#10094;</button>
+      <div class="slides">
+        <div class="slide" *ngFor="let service of services; let i = index" [class.active]="i === currentSlide">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      </div>
+      <button class="slider-btn next" (click)="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+</section>

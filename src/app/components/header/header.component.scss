@@ -1,0 +1,32 @@
+
+@import '../../../styles'; // Import global variables
+
+.header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 1rem 0;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo { font-size: 1.5rem; font-weight: bold; }
+
+    .nav a {
+      margin-left: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+      &:hover { color: $accent-color; }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    .nav { margin-top: 0.5rem; display: flex; flex-direction: column; }
+    .nav a { margin: 0.3rem 0; }
+  }
+}
