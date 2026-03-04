@@ -1,13 +1,18 @@
-@import '../../../styles'; // Import global variables
-
+/* Footer style */
 .footer {
-  background-color: $primary-color;
-  color: #fff;
-  padding: 2rem 1rem;
+  position: fixed;      /* Reste fixe en bas */
+  bottom: 0;            /* Collé en bas */
+  left: 0;
+  width: 100%;          /* Occupe toute la largeur */
+  background-color: #003366; /* Même couleur que ton header */
+  color: white;
   text-align: center;
+  padding: 15px 0;
+  z-index: 1000;        /* Toujours au-dessus du contenu */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
 
-  @media (max-width: 768px) {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
+/* Pour que le contenu principal ne soit pas caché derrière le footer */
+body {
+  padding-bottom: 90px; /* Ajuster selon la hauteur du footer */
 }
