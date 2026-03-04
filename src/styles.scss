@@ -4,6 +4,7 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 html {
   height: 100%;
@@ -107,5 +108,8 @@ button {
     padding: 0.5rem 1rem;
   }
 }
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

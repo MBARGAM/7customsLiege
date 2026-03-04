@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HeroComponent } from './components/hero/hero.component';
+import { SliderComponent } from './components/slider/slider.component';
 import { ServicesComponent } from './components/services/services.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
 
@@ -12,7 +12,7 @@ import { WhyUsComponent } from './components/why-us/why-us.component';
   standalone: true,
   imports: [RouterOutlet,
     HeaderComponent,
-    HeroComponent,
+    SliderComponent,
     ServicesComponent,
     WhyUsComponent,
     ContactComponent,

@@ -1,23 +1,19 @@
 <header class="header">
-
-  <!-- Ligne du haut : langues -->
-  <div class="top-bar">
+  
+  <div class="top-bar d-flex justify-content-center align-items-center">
     <button>FR</button>
     <button>EN</button>
   </div>
-
   <!-- Ligne du bas : logo + nav + quote -->
-  <div class="bottom-bar">
-
-    <!-- Logo venant de /assets -->
-    <div class="logo">
-      <img src="assets/images/burger.png" alt="Logo">
+  <div class="bottom-bar d-flex justify-content-between align-items-center">
+    <!-- Logo -->
+    <div class="logo d-flex flex-column align-items-center">
+      <!-- Top bar pour les langues, au-dessus de tout -->
+      <img src="assets/images/logo2.png" alt="Logo">
     </div>
-
-    <!-- Navigation avec burger -->
-    <app-nav></app-nav>
-
-    <button class="quote">GET A QUOTE</button>
+    <!-- Navigation -->
+   <app-nav></app-nav>
+    <!-- Bouton "Get a Quote" -->
   </div>
-
+   
 </header>
