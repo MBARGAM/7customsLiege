@@ -1,18 +1,18 @@
-/* Footer style */
 .footer {
-  position: fixed;      /* Reste fixe en bas */
-  bottom: 0;            /* Collé en bas */
+  position: fixed;
+  bottom: 0;
   left: 0;
-  width: 100%;          /* Occupe toute la largeur */
-  background-color: #003366; /* Même couleur que ton header */
+  width: 100%;
+  background-color: #003366;
   color: white;
   text-align: center;
   padding: 15px 0;
-  z-index: 1000;        /* Toujours au-dessus du contenu */
+  z-index: 1000;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
 }
 
-/* Pour que le contenu principal ne soit pas caché derrière le footer */
-body {
-  padding-bottom: 90px; /* Ajuster selon la hauteur du footer */
+.footer p,
+.footer a,
+.footer span {
+  color: white !important;
 }
