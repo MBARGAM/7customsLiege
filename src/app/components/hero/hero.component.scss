@@ -1,7 +1,12 @@
+/* Import typographie moderne */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 .hero-container {
   position: relative;
   width: 100%;
-  height: 100vh; // occupe toute la hauteur de l'écran
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  
 
   .hero-overlay {
     position: absolute;
@@ -9,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); // overlay semi-transparent
+    background-color: rgba(0, 0, 0, 0.47);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,28 +24,68 @@
   .hero-content {
     color: #fff;
 
+    /* TITRE PRINCIPAL */
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;   // cohérent avec ton h1 global
+      font-weight: 700;
       margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
+    /* SOUS-TEXTE */
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;   // cohérent avec ton p global
+      font-weight: 300;
       margin-bottom: 2rem;
+      line-height: 1.6;
+      color:white;
     }
 
+    /* BOUTON */
     .hero-btn {
       display: inline-block;
       padding: 0.75rem 1.5rem;
       background-color: #007bff;
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       border-radius: 4px;
       transition: background-color 0.3s;
 
       &:hover {
         background-color: darken(#007bff, 10%);
+      }
+    }
+  }
+
+  /* --- TABLETTE --- */
+  @media (max-width: 992px) {
+    .hero-content {
+      h1 {
+        font-size: 2.2rem;  // cohérent avec ton h2 global
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      .hero-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /* --- MOBILE --- */
+  @media (max-width: 576px) {
+    .hero-content {
+      h1 {
+        font-size: 1.8rem;  // cohérent avec ton h2 mobile
+      }
+      p {
+        font-size: 1rem;
+      }
+      .hero-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
       }
     }
   }

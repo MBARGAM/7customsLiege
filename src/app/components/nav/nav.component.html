@@ -1,16 +1,17 @@
 <nav class="nav">
 
   <!-- Burger visible en mobile -->
-  <div class="burger" (click)="toggleMenu()">
+  <div class="burger" (click)="toggleMenu()" >
     <img src="assets/images/burger.png" alt="Menu" />
   </div>
 
   <!-- Menu -->
   <ul class="nav-links" [class.open]="menuOpen">
-    <li><a routerLink="/" (click)="closeMenu()">Accueil</a></li>
-    <li><a routerLink="/services" (click)="closeMenu()">Services</a></li>
-    <li><a routerLink="/about" (click)="closeMenu()">À propos</a></li>
-    <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+    <li><a href="#accueil" (click)="closeMenu()">Accueil</a></li>
+    <li><a href="#services" (click)="closeMenu()">Services</a></li>
+    <li><a href="#about" (click)="closeMenu()">À propos</a></li>
+    <li><a href="#whyUs" (click)="closeMenu()">Pourquoi nous?</a></li>
+    <li><a href="mailto:contact@7customsliege.be" (click)="closeMenu()">Contact</a></li>
   </ul>
 
 </nav>

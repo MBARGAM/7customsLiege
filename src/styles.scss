@@ -1,11 +1,8 @@
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
+/* ================= ANGULAR MATERIAL THEME ================= */
 @use '@angular/material' as mat;
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+/* Material Theme */
 html {
   height: 100%;
   @include mat.theme(
@@ -20,23 +17,22 @@ html {
   );
 }
 
+/* ================= BASE BODY ================= */
 body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
   color-scheme: light;
-
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
   background-color: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
-
-  // Reset the user agent margin.
   margin: 0;
   height: 100%;
+
+  /* Override Material font */
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding: 0;
 }
+
 /* ================= VARIABLES ================= */
 $primary-color: #007bff;
 $secondary-color: #f0f0f0;
@@ -44,15 +40,7 @@ $accent-color: #ffc107;
 $text-color: #333;
 $bg-color: #fff;
 
-/* ================= GLOBAL ================= */
-body {
-  font-family: 'Arial', sans-serif;
-  color: $text-color;
-  background-color: $bg-color;
-  margin: 0;
-  padding: 0;
-}
-
+/* ================= LIENS ================= */
 a {
   color: $primary-color;
   text-decoration: none;
@@ -81,35 +69,69 @@ button {
   background-color: $primary-color;
   color: #fff;
 }
+
 .btn-secondary {
   background-color: $secondary-color;
   color: $text-color;
 }
 
-/* ================= CONTAINERS ================= */
+/* ================= CONTAINER ================= */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ================= MEDIA QUERIES ================= */
+/* ================= TYPOGRAPHIE GLOBALE ================= */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: $text-color;
+  margin: 0 0 1rem 0;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.3rem; }
+h6 { font-size: 1.1rem; }
+
+p, li, a, span {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+/* ================= RESPONSIVE TYPO ================= */
 @media (max-width: 992px) {
   .container {
     width: 95%;
   }
+
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.6rem; }
+
+  p, li, a, span {
+    font-size: 1.1rem;
+  }
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
+@media (max-width: 576px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+
+  p, li, a, span {
+    font-size: 1rem;
   }
+
   button {
     padding: 0.5rem 1rem;
   }
 }
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
 
-/* Importing Bootstrap SCSS file. */
+/* ================= BOOTSTRAP ================= */
 @import 'bootstrap/scss/bootstrap';

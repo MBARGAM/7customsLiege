@@ -1,49 +1,99 @@
-@import '../../../styles'; // Import global variables
 .services {
-  padding: 4rem 1rem;
-  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  font-family: 'Inter', sans-serif;
 
-  h2 { margin-bottom: 2rem; }
+  /* 🖥️ DESKTOP : image 50% / texte 50% */
+  .service {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
 
-  .slider {
-    position: relative;
-    overflow: hidden;
-
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-
-      .slide {
-        min-width: 100%;
-        flex-shrink: 0;
-        opacity: 0.3;
-        transition: opacity 0.5s;
-
-        &.active { opacity: 1; }
-
-        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        p { font-size: 1rem; }
-      }
+    .service-img {
+      flex: 0 0 50%;
     }
 
-    .slider-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: $primary-color;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 2rem;
-      cursor: pointer;
-      &.prev { left: 0; }
-      &.next { right: 0; }
+    .service-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      flex: 0 0 50%;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .desktop-version {
+        display: block;
+      }
+
+      .mobile-version {
+        display: none;
+      }
     }
   }
 
-  @media (max-width: 768px) {
-    .slider-btn { font-size: 1.5rem; padding: 0.3rem 0.6rem; }
-    .slide h3 { font-size: 1.2rem; }
-    .slide p { font-size: 0.9rem; }
+  /* Alternance image droite / texte gauche */
+  .service.reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* 📟 TABLETTE : float activé, image plus grande */
+  @media (min-width: 577px) and (max-width: 992px) {
+    .service {
+      display: block;
+
+      .service-img img {
+        float: left;
+        width: 45%;
+        margin: 0 1.5rem 1.5rem 0;
+      }
+
+      .service.reverse .service-img img {
+        float: right;
+        margin: 0 0 1.5rem 1.5rem;
+      }
+
+      .desktop-version {
+        display: none;
+      }
+
+      .mobile-version {
+        display: block;
+      }
+    }
+  }
+
+  /* 📱 MOBILE : float activé, image à droite/gauche */
+  @media (max-width: 576px) {
+    .service {
+      display: block;
+
+      .service-img img {
+        float: left;
+        width: 40%;
+        margin: 0 1rem 1rem 0;
+      }
+
+      .service.reverse .service-img img {
+        float: right;
+        margin: 0 0 1rem 1rem;
+      }
+
+      .desktop-version {
+        display: none !important;
+      }
+
+      .mobile-version {
+        display: block !important;
+      }
+    }
   }
 }
