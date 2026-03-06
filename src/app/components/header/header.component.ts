@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NavComponent,TranslateModule],
+  imports: [NavComponent, TranslatePipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
