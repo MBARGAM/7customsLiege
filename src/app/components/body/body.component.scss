@@ -1,51 +1,56 @@
-.whoWeAre {
-  display: flex;
-  gap: 2rem;
-  padding: 3rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.container{
 
-  .whoWeAreImage img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
+ padding-bottom: calc(12rem + 2rem);
 
-  .whoWeAreText {
-    color: #003366;
-    line-height: 1.6;
-  }
-
-  /* 📱 MOBILE : float activé */
-  @media (max-width: 576px) {
-    display: block; /* on désactive le flex */
-
-    .whoWeAreImage img {
-      float: left;
-      width: 40%;
-      margin: 0 1rem 1rem 0;
-    }
-  }
-
-  /* 📟 TABLETTE : float activé + image plus grande */
-  @media (min-width: 577px) and (max-width: 992px) {
-    display: block;
-
-    .whoWeAreImage img {
-      float: left;
-      width: 45%;
-      margin: 0 1.5rem 1.5rem 0;
-    }
-  }
-
-  /* 🖥️ DESKTOP : float désactivé, layout flex normal */
-  @media (min-width: 993px) {
+  .whoWeAre {
     display: flex;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 
     .whoWeAreImage img {
-      float: none;
       width: 100%;
-      margin: 0;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .whoWeAreText {
+      color: #003366;
+      line-height: 1.6;
+    }
+
+    /* 📱 MOBILE : float activé */
+    @media (max-width: 576px) {
+      display: block; /* on désactive le flex */
+
+      .whoWeAreImage img {
+        float: left;
+        width: 40%;
+        margin: 0 1rem 1rem 0;
+      }
+    }
+
+    /* 📟 TABLETTE : float activé + image plus grande */
+    @media (min-width: 577px) and (max-width: 992px) {
+      display: block;
+
+      .whoWeAreImage img {
+        float: left;
+        width: 45%;
+        margin: 0 1.5rem 1.5rem 0;
+      }
+    }
+
+    /* 🖥️ DESKTOP : float désactivé, layout flex normal */
+    @media (min-width: 993px) {
+      display: flex;
+
+      .whoWeAreImage img {
+        float: none;
+        width: 100%;
+        margin: 0;
+      }
     }
   }
 }
