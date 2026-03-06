@@ -109,6 +109,12 @@ dans chaque composant import ceci
     this.translate.use(lang);
     localStorage.setItem('lang', lang); // Sauvegarde la langue sélectionnée
   }
+* DEPLOIEMENT SUR GITHUB 
+ng add angular-cli-ghpages
+ng build --base-href /v1customsLiege/
+ng deploy
+
+
 
 
 
