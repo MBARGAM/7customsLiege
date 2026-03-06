@@ -67,3 +67,48 @@ For more information on using the Angular CLI, including detailed command refere
 - ng add @ng-bootstrap/ng-bootstrap
 - npm install zone.js@0.15 --save --legacy-peer-deps
 - npm install --save-dev typescript@5.8
+-npm i @ngx-translate/core @ngx-translate/http-loader
+
+ensuite config dooit ressembler à ca apres cette migration
+import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
+
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideBrowserGlobalErrorListeners(),
+    provideRouter(routes),
+    provideHttpClient(),
+
+    provideTranslateService({
+      fallbackLang: 'fr',        // remplace defaultLanguage + useDefaultLang
+      loader: provideTranslateHttpLoader({
+        prefix: './assets/i18n/',  // dossier des fichiers JSON
+        suffix: '.json'            // extension
+      })
+    })
+  ],
+};
+dans chaque composant import ceci
+-import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+   imports: [
+    RouterModule,
+    CommonModule,
+    TranslatePipe,
+  ],
+  
+  constructor(private translate : TranslateService){}
+
+   // fonction de traduction 
+  translateText(lang : string ){
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang); // Sauvegarde la langue sélectionnée
+  }
+
+
+
