@@ -50,9 +50,20 @@
 
   <!-- SERVICE 2 : Stockage -->
   <div class="service reverse">
-    <div class="service-img">
-      <img src="assets/images/entreposage.png" alt="{{ 'Stockage' | translate }}">
-    </div>
+   <div class="service-img">
+      @if (isFrench) {
+        <img 
+          src="assets/images/entreposage.png"
+          alt="Entreposage">
+      }
+
+      @if (!isFrench) {
+        <img 
+          src="assets/images/storage.png"
+          alt="Storage">
+      }
+</div>
+
 
     <div class="service-content">
 
