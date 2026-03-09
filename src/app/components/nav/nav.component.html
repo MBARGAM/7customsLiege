@@ -7,15 +7,17 @@
   <ul class="nav-links" [class.open]="menuOpen">
 
     <li><a href="#accueil" (click)="closeMenu()">{{ 'Accueil' | translate }}</a></li>
-
-    <li class="dropdown">
-      <a class="dropdown-toggle">{{ 'Services' | translate }}</a>
+    <li class="dropdown" [class.open]="dropdownOpen">
+      <a class="dropdown-toggle" (click)="toggleDropdown()">
+        {{ 'Services' | translate }}
+      </a>
 
       <ul class="dropdown-menu">
         <li><a href="#douanes" (click)="closeMenu()">{{ 'Douanes' | translate }}</a></li>
         <li><a href="#logistique" (click)="closeMenu()">{{ 'Logistique' | translate }}</a></li>
       </ul>
     </li>
+
 
     <li><a href="#about" (click)="closeMenu()">{{ 'À propos' | translate }}</a></li>
     <li><a href="#whyUs" (click)="closeMenu()">{{ 'Pourquoi nous ?' | translate }}</a></li>

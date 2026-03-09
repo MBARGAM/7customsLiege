@@ -16,14 +16,15 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 })
 export class NavComponent {
 
+ 
   menuOpen = false;
-  
+  dropdownOpen = false; // 👈 AJOUT
+
   constructor(private translate : TranslateService){}
 
-   // fonction de traduction 
   translateText(lang : string ){
     this.translate.use(lang);
-    localStorage.setItem('lang', lang); // Sauvegarde la langue sélectionnée
+    localStorage.setItem('lang', lang);
   }
 
   toggleMenu() {
@@ -32,5 +33,10 @@ export class NavComponent {
 
   closeMenu() {
     this.menuOpen = false;
+    this.dropdownOpen = false; // 👈 ferme aussi le sous-menu
+  }
+
+  toggleDropdown() {          // 👈 AJOUT
+    this.dropdownOpen = !this.dropdownOpen;
   }
 }
