@@ -1,3 +1,6 @@
+
+# trigger
+
 name: Deploy Angular to GitHub Pages
 
 on:
