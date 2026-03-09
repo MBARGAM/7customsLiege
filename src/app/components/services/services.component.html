@@ -3,46 +3,46 @@
   <!-- SERVICE 1 : Dédouanement -->
   <div class="service">
     <div class="service-img">
-      <img src="assets/images/douanes.png" alt="Dédouanement">
+      <img src="assets/images/douanes.png" alt="{{ 'Dédouanement' | translate }}">
     </div>
 
     <div class="service-content">
 
       <!-- Version Desktop -->
       <div class="desktop-version" id="douanes">
-        <h3>Dédouanement</h3>
+        <h3>{{ 'Dédouanement' | translate }}</h3>
         <ul>
           <li>
-            <strong>T1 – Déclarations douanières</strong><br>
+            <strong>{{ 'T1 – Déclarations douanières' | translate }}</strong><br>
             <span class="explain">
-              Préparation et soumission des déclarations officielles pour garantir un passage rapide et conforme.
+              {{ 'Préparation et soumission des déclarations officielles pour garantir un passage rapide et conforme.' | translate }}
             </span>
           </li>
 
           <li>
-            <strong>T2 – Documents d’import/export</strong><br>
+            <strong>{{ 'T2 – Documents d’import/export' | translate }}</strong><br>
             <span class="explain">
-              Gestion complète des documents obligatoires : factures, listes de colisage, certificats d’origine, documents de transport.
+              {{ 'Gestion complète des documents obligatoires : factures, listes de colisage, certificats d’origine, documents de transport.' | translate }}
             </span>
           </li>
 
           <li>
-            <strong>T3 – Contrôle conformité</strong><br>
+            <strong>{{ 'T3 – Contrôle conformité' | translate }}</strong><br>
             <span class="explain">
-              Vérification des normes légales, sanitaires et sécuritaires pour éviter tout blocage ou retard.
+              {{ 'Vérification des normes légales, sanitaires et sécuritaires pour éviter tout blocage ou retard.' | translate }}
             </span>
           </li>
         </ul>
-        <a href="mailto:contact@7customsliege.be" class="hero-btn">Contactez-nous</a>
+        <a href="mailto:contact@7customsliege.be" class="hero-btn">{{ 'Contactez-nous' | translate }}</a>
       </div>
 
       <!-- Version Mobile -->
       <div class="mobile-version" id="douanes">
-        <h3>Dédouanement</h3>
+        <h3>{{ 'Dédouanement' | translate }}</h3>
         <p>
-          Nous prenons en charge toutes vos formalités douanières avec précision, conformité et rapidité, afin de garantir un passage fluide de vos marchandises à l’importation comme à l’exportation.
+          {{ 'Nous prenons en charge toutes vos formalités douanières avec précision, conformité et rapidité, afin de garantir un passage fluide de vos marchandises à l’importation comme à l’exportation.' | translate }}
         </p>
-        <a href="mailto:contact@7customsliege.be" class="hero-btn">Contactez-nous</a>
+        <a href="mailto:contact@7customsliege.be" class="hero-btn">{{ 'Contactez-nous' | translate }}</a>
       </div>
 
     </div>
@@ -50,49 +50,60 @@
 
   <!-- SERVICE 2 : Stockage -->
   <div class="service reverse">
-    <div class="service-img">
-      <img src="assets/images/entreposage.png" alt="Stockage">
-    </div>
+   <div class="service-img">
+      @if (isFrench) {
+        <img 
+          src="assets/images/entreposage.png"
+          alt="Entreposage">
+      }
+
+      @if (!isFrench) {
+        <img 
+          src="assets/images/storage.png"
+          alt="Storage">
+      }
+</div>
+
 
     <div class="service-content">
 
       <!-- Version Desktop -->
       <div class="desktop-version" id="logistique">
-        <h3>Stockage</h3>
+        <h3>{{ 'Stockage' | translate }}</h3>
         <ul>
           <li>
-            <strong>T1 – Entrepôts sécurisés</strong><br>
+            <strong>{{ 'T1 – Entrepôts sécurisés' | translate }}</strong><br>
             <span class="explain">
-              Infrastructures protégées, surveillées 24/7 et adaptées à tous types de marchandises.
+              {{ 'Infrastructures protégées, surveillées 24/7 et adaptées à tous types de marchandises.' | translate }}
             </span>
           </li>
 
           <li>
-            <strong>T2 – Gestion des stocks</strong><br>
+            <strong>{{ 'T2 – Gestion des stocks' | translate }}</strong><br>
             <span class="explain">
-              Suivi précis des entrées, sorties et niveaux de stock pour une logistique maîtrisée.
+              {{ 'Suivi précis des entrées, sorties et niveaux de stock pour une logistique maîtrisée.' | translate }}
             </span>
           </li>
 
           <li>
-            <strong>T3 – Préparation des commandes</strong><br>
+            <strong>{{ 'T3 – Préparation des commandes' | translate }}</strong><br>
             <span class="explain">
-              Picking, emballage, étiquetage et préparation des expéditions selon vos besoins.
+              {{ 'Picking, emballage, étiquetage et préparation des expéditions selon vos besoins.' | translate }}
             </span>
           </li>
         </ul>
-       
-          <a href="mailto:contact@7customsliege.be" class="hero-btn">Contactez-nous</a>
-       
+
+        <a href="mailto:contact@7customsliege.be" class="hero-btn">{{ 'Contactez-nous' | translate }}</a>
+
       </div>
 
       <!-- Version Mobile -->
       <div class="mobile-version" id="logistique">
-        <h3>Stockage</h3>
+        <h3>{{ 'Stockage' | translate }}</h3>
         <p>
-          Nous mettons à votre disposition des solutions de stockage sécurisées et parfaitement organisées. Nos entrepôts protégés garantissent la sécurité de vos marchandises, tandis que notre gestion des stocks assure un suivi précis des entrées et sorties. Nous prenons également en charge la préparation des commandes, incluant le picking, l’emballage et la mise en expédition selon vos besoins.
+          {{ 'Nous mettons à votre disposition des solutions de stockage sécurisées et parfaitement organisées. Nos entrepôts protégés garantissent la sécurité de vos marchandises, tandis que notre gestion des stocks assure un suivi précis des entrées et sorties. Nous prenons également en charge la préparation des commandes, incluant le picking, l’emballage et la mise en expédition selon vos besoins.' | translate }}
         </p>
-        <a href="mailto:contact@7customsliege.be" class="hero-btn">Contactez-nous</a>
+        <a href="mailto:contact@7customsliege.be" class="hero-btn">{{ 'Contactez-nous' | translate }}</a>
       </div>
 
     </div>

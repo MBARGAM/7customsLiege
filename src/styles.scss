@@ -1,6 +1,8 @@
 /* ================= ANGULAR MATERIAL THEME ================= */
 @use '@angular/material' as mat;
-@import "bootstrap/dist/css/bootstrap.min.css";
+@use 'bootstrap/scss/bootstrap' as *;
+@use "sass:color";
+
 
 /* Material Theme */
 html {
@@ -50,7 +52,7 @@ a {
 }
 
 /* ================= BOUTONS ================= */
-.hero-btn{
+.hero-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: #007bff;
@@ -59,8 +61,9 @@ a {
   font-weight: 600;
   border-radius: 4px;
   transition: background-color 0.3s;
+
   &:hover {
-    background-color: darken(#007bff, 10%);
+    background-color: color.adjust(#007bff, $lightness: -10%);
   }
 }
 
@@ -96,7 +99,7 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.3rem; }
 h6 { font-size: 1.1rem; }
 
-p, li, a, span {
+ li, a, span {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -131,6 +134,3 @@ p, li, a, span {
     padding: 0.5rem 1rem;
   }
 }
-
-/* ================= BOOTSTRAP ================= */
-@import 'bootstrap/scss/bootstrap';

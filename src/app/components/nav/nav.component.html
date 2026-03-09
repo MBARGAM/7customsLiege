@@ -1,28 +1,25 @@
 <nav class="nav">
 
-  <!-- Burger visible en mobile -->
   <div class="burger" (click)="toggleMenu()">
     <img src="assets/images/burger.png" alt="Menu" />
   </div>
 
-  <!-- Menu -->
   <ul class="nav-links" [class.open]="menuOpen">
 
-    <li><a href="#accueil" (click)="closeMenu()">Accueil</a></li>
+    <li><a href="#accueil" (click)="closeMenu()">{{ 'Accueil' | translate }}</a></li>
 
-    <!-- MENU DÉROULANT SERVICES -->
     <li class="dropdown">
-      <a class="dropdown-toggle">Services</a>
+      <a class="dropdown-toggle">{{ 'Services' | translate }}</a>
 
       <ul class="dropdown-menu">
-        <li><a href="#douanes" (click)="closeMenu()">Douanes</a></li>
-        <li><a href="#logistique" (click)="closeMenu()">Logistique</a></li>
+        <li><a href="#douanes" (click)="closeMenu()">{{ 'Douanes' | translate }}</a></li>
+        <li><a href="#logistique" (click)="closeMenu()">{{ 'Logistique' | translate }}</a></li>
       </ul>
     </li>
 
-    <li><a href="#about" (click)="closeMenu()">À propos</a></li>
-    <li><a href="#whyUs" (click)="closeMenu()">Pourquoi nous?</a></li>
-    <li><a href="mailto:contact@7customsliege.be" (click)="closeMenu()">Contact</a></li>
+    <li><a href="#about" (click)="closeMenu()">{{ 'À propos' | translate }}</a></li>
+    <li><a href="#whyUs" (click)="closeMenu()">{{ 'Pourquoi nous ?' | translate }}</a></li>
+    <li><a href="mailto:contact@7customsliege.be" (click)="closeMenu()">{{ 'Contact' | translate }}</a></li>
 
   </ul>
 
