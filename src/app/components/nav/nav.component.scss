@@ -1,10 +1,13 @@
+/* ----------------------------- */
+/*   STYLES GÉNÉRAUX NAVBAR      */
+/* ----------------------------- */
+
 .nav {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-/* MENU DESKTOP */
 .nav-links {
   list-style: none;
   display: flex;
@@ -13,7 +16,7 @@
   a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 900;
     padding: 5px 0;
     transition: 0.2s ease;
 
@@ -23,7 +26,10 @@
   }
 }
 
-/* DROPDOWN (DESKTOP) */
+/* ----------------------------- */
+/*   DROPDOWN DESKTOP            */
+/* ----------------------------- */
+
 .dropdown {
   position: relative;
 
@@ -61,7 +67,10 @@
   }
 }
 
-/* BURGER (caché en desktop) */
+/* ----------------------------- */
+/*   BURGER (MOBILE)             */
+/* ----------------------------- */
+
 .burger {
   display: none;
   padding: 8px;
@@ -80,15 +89,31 @@
   }
 }
 
-/* MOBILE */
+/* ----------------------------- */
+/*   MOBILE ONLY / DESKTOP ONLY  */
+/* ----------------------------- */
+
+/* Par défaut : desktop */
+.mobile-services {
+  display: none;
+}
+
+.desktop-services {
+  display: block;
+}
+
+/* ----------------------------- */
+/*   RESPONSIVE MOBILE           */
+/* ----------------------------- */
+
 @media (max-width: 768px) {
 
-  /* cacher le menu desktop */
+  /* cacher menu desktop */
   .nav-links {
     display: none;
   }
 
-  /* afficher le burger */
+  /* afficher burger */
   .burger {
     display: block;
   }
@@ -103,8 +128,6 @@
     background: #003366;
     padding: 20px;
     width: 220px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 9998;
 
     a {
@@ -115,28 +138,15 @@
         color: #ffcc00;
       }
     }
+  }
 
-    /* DROPDOWN MOBILE */
-    .dropdown .dropdown-menu {
-      display: none; /* caché par défaut */
-      position: static;
-      background: none;
-      box-shadow: none;
-      padding-left: 15px;
-    }
+  /* afficher lien simple Services */
+  .mobile-services {
+    display: block;
+  }
 
-    /* dropdown ouvert */
-    .dropdown.open .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-toggle {
-      cursor: pointer;
-    }
-
-    .dropdown-menu a {
-      cursor: pointer;
-      pointer-events: auto;
-    }
+  /* cacher dropdown desktop */
+  .desktop-services {
+    display: none;
   }
 }
