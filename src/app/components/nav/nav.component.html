@@ -7,8 +7,14 @@
   <ul class="nav-links" [class.open]="menuOpen">
 
     <li><a href="#accueil" (click)="closeMenu()">{{ 'Accueil' | translate }}</a></li>
-    <li class="dropdown" [class.open]="dropdownOpen">
-      <a class="dropdown-toggle" (click)="toggleDropdown()">
+     <!-- VERSION MOBILE -->
+    <li class="mobile-services">
+      <a href="#Services" (click)="closeMenu()">{{ 'Services' | translate }}</a>
+    </li>
+
+    <!-- VERSION DESKTOP -->
+    <li class="dropdown desktop-services">
+      <a class="dropdown-toggle">
         {{ 'Services' | translate }}
       </a>
 

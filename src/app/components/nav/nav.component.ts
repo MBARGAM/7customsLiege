@@ -12,13 +12,11 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
     TranslatePipe,
   ],
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']   // ✔️ correction ici
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
 
- 
   menuOpen = false;
-  dropdownOpen = false; // 👈 AJOUT
 
   constructor(private translate : TranslateService){}
 
@@ -33,10 +31,5 @@ export class NavComponent {
 
   closeMenu() {
     this.menuOpen = false;
-    this.dropdownOpen = false; // 👈 ferme aussi le sous-menu
-  }
-
-  toggleDropdown() {          // 👈 AJOUT
-    this.dropdownOpen = !this.dropdownOpen;
   }
 }
