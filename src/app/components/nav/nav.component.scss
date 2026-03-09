@@ -13,7 +13,7 @@
   a {
     text-decoration: none;
     color: white;
-    font-weight: 900;
+    font-weight: 500;
     padding: 5px 0;
     transition: 0.2s ease;
 
@@ -116,9 +116,14 @@
       }
     }
 
-    /* DROPDOWN EN MOBILE */
+    /* DROPDOWN MOBILE */
+    .dropdown-toggle {
+      cursor: pointer;
+      pointer-events: auto; /* permet le clic */
+    }
+
     .dropdown-menu {
-      display: block;
+      display: none;
       position: static;
       background: none;
       box-shadow: none;
@@ -126,7 +131,14 @@
 
       li a {
         padding: 6px 0;
+        cursor: pointer;
+        pointer-events: auto; /* clic garanti */
       }
+    }
+
+    /* quand le dropdown est ouvert */
+    .dropdown.open .dropdown-menu {
+      display: block;
     }
   }
 }
