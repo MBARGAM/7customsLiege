@@ -9,8 +9,8 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-
-  TVA = "N° de TVA : 1034846478";
+ 
+  TVA = "N° de TVA : 1034 846 478";
    
   constructor(private translate : TranslateService){}
 
